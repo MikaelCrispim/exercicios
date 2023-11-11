@@ -1,20 +1,28 @@
-##Suponha que você está criando um programa para corrigir automaticamente palavras digitadas incorretamente. Você precisa criar uma função que recebe uma frase e substitui todas as ocorrências de uma palavra mal escrita por uma versão correta. Além disso, você deve verificar se a palavra mal escrita está contida na frase original e, se não estiver, adicionar a palavra mal escrita à lista de palavras desconhecidas.
+# Exercício: Manipulação de Strings
 
-def corrigir_frase(frase, palavra_mal_escrita, palavra_correta, palavras_desconhecidas):
-    if palavra_mal_escrita in frase:
-        frase_corrigida = frase.replace(palavra_mal_escrita, palavra_correta)
-    else:
-        frase_corrigida = frase
-        palavras_desconhecidas.append(palavra_mal_escrita)
-    return frase_corrigida
+# 1. Substituição de String
+# a) Crie uma variável chamada 'frase' e atribua a ela a seguinte frase: "Eu gosto de programar em [linguagem]."
+# b) Utilize o método de substituição para substituir "[linguagem]" pelo nome de uma linguagem de programação de sua escolha.
+# c) Imprima a frase modificada.
 
-frase_original = "Eu gosto de pyton, é uma linguagem de programação incrível."
-palavra_mal_escrita = "pyton"
-palavra_correta = "Python"
-palavras_desconhecidas = []
+# 2. Strings Personalizadas
+# a) Crie duas variáveis: 'nome' e 'idade', atribuindo seu nome e idade a essas variáveis, respectivamente.
+# b) Crie uma string personalizada que inclua seu nome e idade. Por exemplo, "Meu nome é [nome] e eu tenho [idade] anos."
+# c) Imprima a string personalizada.
 
-frase_corrigida = corrigir_frase(frase_original, palavra_mal_escrita, palavra_correta, palavras_desconhecidas)
+# Solução:
 
-print("Frase original: ", frase_original)
-print("Frase corrigida: ", frase_corrigida)
-print("Palavras desconhecidas: ", palavras_desconhecidas)
+# 1. Substituição de String
+frase = "Eu gosto de programar em [linguagem]."
+linguagem_programacao = "Python"
+frase_modificada = frase.replace("[linguagem]", linguagem_programacao)
+print("1. Substituição de String:")
+print(frase_modificada)
+print()
+
+# 2. Strings Personalizadas
+nome = "SeuNome"
+idade = 25
+string_personalizada = f"Meu nome é {nome} e eu tenho {idade} anos."
+print("2. Strings Personalizadas:")
+print(string_personalizada)
